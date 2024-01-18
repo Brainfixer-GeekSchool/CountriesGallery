@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-image: url(https://cms.yesim.app/uploads/europe_Eiffel_Towercover_799e3441b9.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s ease;
+    backdrop-filter: blur(20px);
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    padding: 0 2rem;
+    gap: 22px;
+}
+
+.slide{
+    flex: 1;
+    height: 80vh;
+    border-radius: 1.5rem;
+    color: white; 
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    transition: all 0.5s ease;
+    background-size: cover;
+    position: relative;
+}
+
+.slide::after{
+    content:"";
+    width: 100%;
+    height: 100%;
+    background-color: #7e958a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1.5rem;
+    transition: all 0.5s ease;
+}
+
+
+.slide h3{
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: all 0.5s ease;
+
+
+}
+
+.slide.active{
+    flex: 6;
+    
+}
+
+.slide.active::after{
+    background-color: transparent;
+
+}
+
+.slide.active h3{
+    opacity: 1;
+}
+
